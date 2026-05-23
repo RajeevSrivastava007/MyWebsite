@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Rajeev Srivastava</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg:#0c0c0b;--bg2:#111110;--bg3:#181816;
+    --line:rgba(255,255,255,0.08);--line2:rgba(255,255,255,0.15);
+    --text:#e8e6e0;--text2:#9a9890;--text3:#5c5a56;
+    --accent:#c8a96e;
+    --nav-bg:rgba(12,12,11,0.93);--zoho-btn:#5646A5;
+  }
+  [data-theme="light"] {
+    --bg:#faf9f6;--bg2:#f3f1ec;--bg3:#eceae4;
+    --line:rgba(0,0,0,0.08);--line2:rgba(0,0,0,0.15);
+    --text:#1a1916;--text2:#5a5850;--text3:#9a9890;
+    --accent:#a0782a;
+    --nav-bg:rgba(250,249,246,0.93);
+  }
+  html { scroll-behavior: smooth; }
+  body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-weight:300; line-height:1.7; font-size:16px; transition:background .3s,color .3s; }
+  ::selection { background:var(--accent); color:#fff; }
+  ::-webkit-scrollbar { width:4px; }
+  ::-webkit-scrollbar-track { background:var(--bg); }
+  ::-webkit-scrollbar-thumb { background:var(--text3); border-radius:2px; }
+
+  /* NAV */
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 4rem; height:66px; background:var(--nav-bg); backdrop-filter:blur(20px); border-bottom:1px solid var(--line); transition:background .3s; }
+  .nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:400; letter-spacing:.04em; color:var(--text); text-decoration:none; }
+  .nav-logo span { color:var(--accent); }
+  .nav-right { display:flex; align-items:center; gap:1rem; }
+  .theme-toggle { display:flex; align-items:center; gap:7px; cursor:pointer; padding:6px 14px; border:1px solid var(--line2); border-radius:40px; background:transparent; color:var(--text2); font-family:'DM Sans',sans-serif; font-size:12px; transition:all .2s; }
+  .theme-toggle:hover { border-color:var(--accent); color:var(--accent); }
+  .nav-back { color:var(--text2); text-decoration:none; font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; transition:color .2s; }
+  .nav-back:hover { color:var(--accent); }
+  .nav-back::before { content:'← '; }
+
+  /* CONTENT */
+  .page-wrap { max-width:760px; margin:0 auto; padding:7rem 2rem 6rem; }
+
+  .page-eyebrow { display:flex; align-items:center; gap:1rem; margin-bottom:2rem; }
+  .page-eyebrow-line { width:32px; height:1px; background:var(--accent); }
+  .page-eyebrow span { font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); }
+
+  .page-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.4rem,5vw,4rem); font-weight:300; line-height:1.1; letter-spacing:-.02em; margin-bottom:1rem; }
+  .page-meta { font-size:13px; color:var(--text3); margin-bottom:3.5rem; padding-bottom:2rem; border-bottom:1px solid var(--line); letter-spacing:.04em; }
+  .page-meta span { margin-right:2rem; }
+
+  /* Policy sections */
+  .policy-section { margin-bottom:2.5rem; padding-bottom:2.5rem; border-bottom:1px solid var(--line); }
+  .policy-section:last-child { border-bottom:none; }
+
+  .clause-num { font-family:'DM Mono',monospace; font-size:10.5px; color:var(--accent); letter-spacing:.12em; text-transform:uppercase; margin-bottom:.5rem; }
+  .clause-title { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:400; color:var(--text); margin-bottom:.85rem; line-height:1.2; }
+  .clause-body { font-size:15px; color:var(--text2); line-height:1.85; }
+  .clause-body p { margin-bottom:.85rem; }
+  .clause-body p:last-child { margin-bottom:0; }
+  .clause-body ul { margin:.5rem 0 .85rem 0; list-style:none; }
+  .clause-body ul li { padding:4px 0 4px 1.25rem; position:relative; font-size:14.5px; color:var(--text2); }
+  .clause-body ul li::before { content:'·'; position:absolute; left:0; color:var(--accent); font-size:1.2em; line-height:1.4; }
+
+  /* Highlight box */
+  .policy-highlight { background:var(--accent-dim,rgba(200,169,110,0.1)); border-left:3px solid var(--accent); padding:1.25rem 1.5rem; margin-bottom:3rem; }
+  .policy-highlight p { font-size:15px; color:var(--text); line-height:1.8; font-weight:400; }
+
+  /* Footer */
+  footer { border-top:1px solid var(--line); padding:2rem 4rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+  .footer-text { font-size:13px; color:var(--text3); }
+  .footer-links { display:flex; gap:2rem; }
+  .footer-links a { font-size:13px; color:var(--text3); text-decoration:none; transition:color .2s; }
+  .footer-links a:hover { color:var(--accent); }
+
+  @media(max-width:768px) {
+    nav { padding:0 1.5rem; }
+    .page-wrap { padding:6rem 1.5rem 4rem; }
+    footer { padding:2rem 1.5rem; flex-direction:column; text-align:center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">R<span>.</span>S</a>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle">
+      <span id="toggleIcon">🌙</span>
+      <span id="toggleLabel">Light Mode</span>
+    </button>
+    <a href="index.html" class="nav-back">Back to Portfolio</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="page-eyebrow">
+    <div class="page-eyebrow-line"></div>
+    <span>Legal</span>
+  </div>
+
+  <h1 class="page-title">Terms of Service</h1>
+  <div class="page-meta">
+    <span>Effective Date: 1 June 2025</span>
+    <span>Rajeev Srivastava &nbsp;|&nbsp; iam@rajeevsrivastava.com</span>
+  </div>
+
+  <div class="policy-highlight">
+    <p>By booking and paying for any consultation session through this website, you agree to be bound by these Terms of Service. Please read them carefully before proceeding with a booking.</p>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Clause 01</div>
+    <div class="clause-title">Nature of Services</div>
+    <div class="clause-body">
+      <p>Rajeev Srivastava provides professional consulting, solution architecture, and advisory services related to Zoho platforms, business process design, product management, and delivery. All sessions are delivered via Zoho Meetings unless otherwise agreed in writing prior to the session.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Clause 02</div>
+    <div class="clause-title">Booking & Payment</div>
+    <div class="clause-body">
+      <p>All sessions must be booked and paid for in advance through the designated booking portal. A booking is confirmed only upon receipt of full payment. Prices are as listed on the booking portal at the time of booking and are inclusive of applicable taxes unless stated otherwise.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Clause 03</div>
+    <div class="clause-title">No Refund Policy</div>
+    <div class="clause-body">
+      <p>All payments made for consultation sessions are strictly non-refundable. Once payment is processed, no refund will be issued under any circumstances, including but not limited to:</p>
+      <ul>
+        <li>Change of mind after payment</li>
+        <li>Failure to attend the booked session</li>
+        <li>Partial utilisation of the session duration</li>
+        <li>Dissatisfaction with the direction or outcome of advice given</li>
+        <li>Technical issues on the client's end preventing attendance</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Clause 04</div>
+    <div class="clause-title">Rescheduling</div>
+    <div class="clause-body">
+      <p>While sessions cannot be cancelled, a client may request a one-time rescheduling by writing to iam@rajeevsrivastava.com at least 24 hours before the scheduled session time. Rescheduling is subject to availability and is not guaranteed.</p>
+      <p>In the unlikely event that the service provider is unable to conduct a confirmed session due to circumstances solely within their control, a rescheduled session will be offered at no additional cost as the sole remedy.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Clause 05</div>
+    <div class="clause-title">Scope of Service</div>
+    <div class="clause-body">
+      <p>Each session is limited to the duration and scope described at the time of booking. Advice provided during sessions is professional opinion based on information available at the time. The service provider does not guarantee specific business outcomes resulting from advice given.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Clause 06</div>
+    <div class="clause-title">Portfolio & Marketing Rights</div>
+    <div class="clause-body">
+      <p>The service provider reserves the right to reference the engagement — including the client's name, industry, problem scope, and outcomes — for portfolio, case study, and marketing purposes. This includes use on the service provider's website, LinkedIn, and other professional channels.</p>
+      <p>If a client wishes to opt out of being referenced publicly, they must notify the service provider in writing at iam@rajeevsrivastava.com before or during the session. The service provider will honour such requests promptly. Absent a written opt-out, engagement details may be referenced at the service provider's discretion.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Clause 07</div>
+    <div class="clause-title">Confidentiality</div>
+    <div class="clause-body">
+      <p>Both parties agree to keep genuinely sensitive or proprietary business information shared during sessions confidential and not to disclose it to third parties without prior written consent. This clause does not restrict the service provider's rights under Clause 06 (Portfolio & Marketing Rights).</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Clause 08</div>
+    <div class="clause-title">Intellectual Property</div>
+    <div class="clause-body">
+      <p>All materials, frameworks, documents, and methodologies shared or produced during or after a session remain the intellectual property of Rajeev Srivastava unless explicitly transferred in writing. Clients are granted a personal, non-transferable licence to use materials shared during their session for their own internal business purposes.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Clause 09</div>
+    <div class="clause-title">Limitation of Liability</div>
+    <div class="clause-body">
+      <p>Rajeev Srivastava's total liability for any claim arising from services rendered shall not exceed the amount paid by the client for the specific session in question. The service provider is not liable for indirect, consequential, or incidental damages of any kind.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Clause 10</div>
+    <div class="clause-title">Governing Law</div>
+    <div class="clause-body">
+      <p>These Terms shall be governed by and construed in accordance with the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in New Delhi, India.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Clause 11</div>
+    <div class="clause-title">Changes to Terms</div>
+    <div class="clause-body">
+      <p>These Terms may be updated at any time. The latest version will always be available at this URL. Continued use of the booking portal after any update constitutes acceptance of the revised Terms.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Contact</div>
+    <div class="clause-title">Questions?</div>
+    <div class="clause-body">
+      <p>Write to <a href="mailto:iam@rajeevsrivastava.com" style="color:var(--accent);text-decoration:none;">iam@rajeevsrivastava.com</a> for any queries regarding these terms.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-text">&copy; <span id="footerYear"></span> Rajeev Srivastava</div>
+  <div class="footer-links">
+    <a href="index.html">Portfolio</a>
+    <a href="refund-policy.html">Refund &amp; Cancellation Policy</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("footerYear").textContent = new Date().getFullYear();
+
+  var root = document.documentElement;
+  var btn = document.getElementById("themeToggle");
+  var icon = document.getElementById("toggleIcon");
+  var label = document.getElementById("toggleLabel");
+  var theme;
+  var manual = localStorage.getItem("rs-theme-manual");
+
+  function getTimeTheme() {
+    var h = new Date().getHours();
+    return (h >= 6 && h < 19) ? "light" : "dark";
+  }
+  function applyTheme(t) {
+    if (t === "light") { root.setAttribute("data-theme","light"); icon.textContent="🌙"; label.textContent="Dark Mode"; }
+    else { root.removeAttribute("data-theme"); icon.textContent="☀"; label.textContent="Light Mode"; }
+    theme = t;
+  }
+  applyTheme(manual || getTimeTheme());
+  btn.addEventListener("click", function() {
+    var next = theme === "dark" ? "light" : "dark";
+    applyTheme(next);
+    localStorage.setItem("rs-theme-manual", next);
+  });
+  setInterval(function() {
+    if (!localStorage.getItem("rs-theme-manual")) applyTheme(getTimeTheme());
+  }, 60000);
+</script>
+</body>
+</html>
