@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refund &amp; Cancellation Policy — Rajeev Srivastava</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg:#0c0c0b;--bg2:#111110;--bg3:#181816;
+    --line:rgba(255,255,255,0.08);--line2:rgba(255,255,255,0.15);
+    --text:#e8e6e0;--text2:#9a9890;--text3:#5c5a56;
+    --accent:#c8a96e;
+    --nav-bg:rgba(12,12,11,0.93);
+  }
+  [data-theme="light"] {
+    --bg:#faf9f6;--bg2:#f3f1ec;--bg3:#eceae4;
+    --line:rgba(0,0,0,0.08);--line2:rgba(0,0,0,0.15);
+    --text:#1a1916;--text2:#5a5850;--text3:#9a9890;
+    --accent:#a0782a;
+    --nav-bg:rgba(250,249,246,0.93);
+  }
+  html { scroll-behavior: smooth; }
+  body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-weight:300; line-height:1.7; font-size:16px; transition:background .3s,color .3s; }
+  ::selection { background:var(--accent); color:#fff; }
+  ::-webkit-scrollbar { width:4px; }
+  ::-webkit-scrollbar-track { background:var(--bg); }
+  ::-webkit-scrollbar-thumb { background:var(--text3); border-radius:2px; }
+
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 4rem; height:66px; background:var(--nav-bg); backdrop-filter:blur(20px); border-bottom:1px solid var(--line); transition:background .3s; }
+  .nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:400; letter-spacing:.04em; color:var(--text); text-decoration:none; }
+  .nav-logo span { color:var(--accent); }
+  .nav-right { display:flex; align-items:center; gap:1rem; }
+  .theme-toggle { display:flex; align-items:center; gap:7px; cursor:pointer; padding:6px 14px; border:1px solid var(--line2); border-radius:40px; background:transparent; color:var(--text2); font-family:'DM Sans',sans-serif; font-size:12px; transition:all .2s; }
+  .theme-toggle:hover { border-color:var(--accent); color:var(--accent); }
+  .nav-back { color:var(--text2); text-decoration:none; font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; transition:color .2s; }
+  .nav-back:hover { color:var(--accent); }
+  .nav-back::before { content:'← '; }
+
+  .page-wrap { max-width:760px; margin:0 auto; padding:7rem 2rem 6rem; }
+
+  .page-eyebrow { display:flex; align-items:center; gap:1rem; margin-bottom:2rem; }
+  .page-eyebrow-line { width:32px; height:1px; background:var(--accent); }
+  .page-eyebrow span { font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); }
+
+  .page-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.4rem,5vw,4rem); font-weight:300; line-height:1.1; letter-spacing:-.02em; margin-bottom:1rem; }
+  .page-meta { font-size:13px; color:var(--text3); margin-bottom:3.5rem; padding-bottom:2rem; border-bottom:1px solid var(--line); letter-spacing:.04em; }
+  .page-meta span { margin-right:2rem; }
+
+  .policy-highlight { background:rgba(200,169,110,0.1); border-left:3px solid var(--accent); padding:1.25rem 1.5rem; margin-bottom:3rem; }
+  [data-theme="light"] .policy-highlight { background:rgba(160,120,42,0.08); }
+  .policy-highlight p { font-size:15px; color:var(--text); line-height:1.8; font-weight:400; }
+
+  .policy-section { margin-bottom:2.5rem; padding-bottom:2.5rem; border-bottom:1px solid var(--line); }
+  .policy-section:last-child { border-bottom:none; }
+
+  .clause-num { font-family:'DM Mono',monospace; font-size:10.5px; color:var(--accent); letter-spacing:.12em; text-transform:uppercase; margin-bottom:.5rem; }
+  .clause-title { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:400; color:var(--text); margin-bottom:.85rem; line-height:1.2; }
+  .clause-body { font-size:15px; color:var(--text2); line-height:1.85; }
+  .clause-body p { margin-bottom:.85rem; }
+  .clause-body p:last-child { margin-bottom:0; }
+  .clause-body ul { margin:.5rem 0 .85rem 0; list-style:none; }
+  .clause-body ul li { padding:4px 0 4px 1.25rem; position:relative; font-size:14.5px; color:var(--text2); }
+  .clause-body ul li::before { content:'·'; position:absolute; left:0; color:var(--accent); font-size:1.2em; line-height:1.4; }
+
+  /* Summary table */
+  .policy-table { width:100%; border-collapse:collapse; margin:1.5rem 0; }
+  .policy-table th { font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); text-align:left; padding:.75rem 1rem; border-bottom:1px solid var(--line2); font-weight:500; }
+  .policy-table td { font-size:14px; color:var(--text2); padding:.75rem 1rem; border-bottom:1px solid var(--line); line-height:1.6; vertical-align:top; }
+  .policy-table tr:last-child td { border-bottom:none; }
+  .tag-no { display:inline-block; background:rgba(200,60,60,.12); color:#e07070; font-size:11px; padding:2px 10px; letter-spacing:.06em; text-transform:uppercase; }
+  .tag-yes { display:inline-block; background:rgba(80,180,100,.1); color:#6dc87a; font-size:11px; padding:2px 10px; letter-spacing:.06em; text-transform:uppercase; }
+  .tag-conditional { display:inline-block; background:rgba(200,169,110,.12); color:var(--accent); font-size:11px; padding:2px 10px; letter-spacing:.06em; text-transform:uppercase; }
+
+  footer { border-top:1px solid var(--line); padding:2rem 4rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+  .footer-text { font-size:13px; color:var(--text3); }
+  .footer-links { display:flex; gap:2rem; }
+  .footer-links a { font-size:13px; color:var(--text3); text-decoration:none; transition:color .2s; }
+  .footer-links a:hover { color:var(--accent); }
+
+  @media(max-width:768px) {
+    nav { padding:0 1.5rem; }
+    .page-wrap { padding:6rem 1.5rem 4rem; }
+    footer { padding:2rem 1.5rem; flex-direction:column; text-align:center; }
+    .policy-table th, .policy-table td { padding:.6rem .75rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">R<span>.</span>S</a>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle">
+      <span id="toggleIcon">🌙</span>
+      <span id="toggleLabel">Light Mode</span>
+    </button>
+    <a href="index.html" class="nav-back">Back to Portfolio</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="page-eyebrow">
+    <div class="page-eyebrow-line"></div>
+    <span>Legal</span>
+  </div>
+
+  <h1 class="page-title">Refund &amp; Cancellation Policy</h1>
+  <div class="page-meta">
+    <span>Effective Date: 1 June 2025</span>
+    <span>Rajeev Srivastava &nbsp;|&nbsp; iam@rajeevsrivastava.com</span>
+  </div>
+
+  <div class="policy-highlight">
+    <p>Consultation sessions are delivered on a time and expertise basis. Once a session is booked and paid for, that slot is reserved exclusively for you and preparation begins immediately. Please read this policy carefully before making a booking.</p>
+  </div>
+
+  <!-- SUMMARY TABLE -->
+  <div class="policy-section">
+    <div class="clause-num">Quick Reference</div>
+    <div class="clause-title">Policy at a Glance</div>
+    <div class="clause-body">
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Situation</th>
+            <th>Refund</th>
+            <th>Cancellation</th>
+            <th>Rescheduling</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Client changes mind after payment</td>
+            <td><span class="tag-no">No</span></td>
+            <td><span class="tag-no">No</span></td>
+            <td><span class="tag-conditional">On request, 24h prior</span></td>
+          </tr>
+          <tr>
+            <td>Client fails to attend session</td>
+            <td><span class="tag-no">No</span></td>
+            <td><span class="tag-no">No</span></td>
+            <td><span class="tag-no">No</span></td>
+          </tr>
+          <tr>
+            <td>Client attends partial session</td>
+            <td><span class="tag-no">No</span></td>
+            <td><span class="tag-no">No</span></td>
+            <td><span class="tag-no">No</span></td>
+          </tr>
+          <tr>
+            <td>Technical issue on client's end</td>
+            <td><span class="tag-no">No</span></td>
+            <td><span class="tag-no">No</span></td>
+            <td><span class="tag-conditional">On request, 24h prior</span></td>
+          </tr>
+          <tr>
+            <td>Service provider unable to conduct session</td>
+            <td><span class="tag-no">No</span></td>
+            <td><span class="tag-no">No</span></td>
+            <td><span class="tag-yes">Yes — offered proactively</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Section 01</div>
+    <div class="clause-title">All Sales Are Final</div>
+    <div class="clause-body">
+      <p>All consultation sessions are paid professional services. Once payment is confirmed, the session slot is reserved exclusively for the client and preparation work begins. For this reason, all payments are final and non-refundable without exception.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Section 02</div>
+    <div class="clause-title">No Refunds</div>
+    <div class="clause-body">
+      <p>No refunds will be issued once payment has been processed. This applies to, but is not limited to:</p>
+      <ul>
+        <li>Change of mind after booking</li>
+        <li>Failure to attend the booked session</li>
+        <li>Partial utilisation of the session duration</li>
+        <li>Dissatisfaction with the nature or outcome of advice given</li>
+        <li>Technical difficulties on the client's side preventing attendance</li>
+        <li>Any other reason not explicitly covered by Section 05 of this policy</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Section 03</div>
+    <div class="clause-title">No Cancellations</div>
+    <div class="clause-body">
+      <p>Sessions cannot be cancelled once payment is made. A confirmed booking represents a firm commitment to the service. No credits, vouchers, partial refunds, or alternative compensation will be provided for cancelled sessions under any circumstances.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Section 04</div>
+    <div class="clause-title">Rescheduling</div>
+    <div class="clause-body">
+      <p>While cancellations are not permitted, a client may request a one-time rescheduling of their session by writing to <a href="mailto:iam@rajeevsrivastava.com" style="color:var(--accent);text-decoration:none;">iam@rajeevsrivastava.com</a> at least <strong style="color:var(--text);font-weight:500;">24 hours before</strong> the scheduled session time.</p>
+      <p>Rescheduling is subject to availability and is not guaranteed. A rescheduling request does not entitle the client to a refund if a suitable alternative slot cannot be found.</p>
+      <p>Sessions where the client fails to show up at the agreed time without prior notice will be considered fully delivered. No rescheduling will be offered in such cases.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Section 05</div>
+    <div class="clause-title">If the Service Provider Cannot Conduct the Session</div>
+    <div class="clause-body">
+      <p>In the unlikely event that Rajeev Srivastava is unable to conduct a confirmed session due to circumstances solely within their control, the client will be proactively offered a rescheduled session at no additional cost. This rescheduled session is the sole remedy available in such cases and does not constitute grounds for a refund.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Section 06</div>
+    <div class="clause-title">Free Discovery Call</div>
+    <div class="clause-body">
+      <p>The "Just Talk" 30-minute discovery call is offered at no charge. No payment is involved, and therefore this policy does not apply to it. Clients may reschedule or not attend a free discovery call without any obligation.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <div class="clause-num">Contact</div>
+    <div class="clause-title">Questions About Your Booking?</div>
+    <div class="clause-body">
+      <p>Write to <a href="mailto:iam@rajeevsrivastava.com" style="color:var(--accent);text-decoration:none;">iam@rajeevsrivastava.com</a> before making a booking if you have any questions about this policy. We are happy to clarify anything in advance.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-text">&copy; <span id="footerYear"></span> Rajeev Srivastava</div>
+  <div class="footer-links">
+    <a href="index.html">Portfolio</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("footerYear").textContent = new Date().getFullYear();
+
+  var root = document.documentElement;
+  var btn = document.getElementById("themeToggle");
+  var icon = document.getElementById("toggleIcon");
+  var label = document.getElementById("toggleLabel");
+  var theme;
+  var manual = localStorage.getItem("rs-theme-manual");
+
+  function getTimeTheme() {
+    var h = new Date().getHours();
+    return (h >= 6 && h < 19) ? "light" : "dark";
+  }
+  function applyTheme(t) {
+    if (t === "light") { root.setAttribute("data-theme","light"); icon.textContent="🌙"; label.textContent="Dark Mode"; }
+    else { root.removeAttribute("data-theme"); icon.textContent="☀"; label.textContent="Light Mode"; }
+    theme = t;
+  }
+  applyTheme(manual || getTimeTheme());
+  btn.addEventListener("click", function() {
+    var next = theme === "dark" ? "light" : "dark";
+    applyTheme(next);
+    localStorage.setItem("rs-theme-manual", next);
+  });
+  setInterval(function() {
+    if (!localStorage.getItem("rs-theme-manual")) applyTheme(getTimeTheme());
+  }, 60000);
+</script>
+</body>
+</html>
