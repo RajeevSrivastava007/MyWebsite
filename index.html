@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rajeev Srivastava — Zoho Consultant · Product · Delivery</title>
+<title>Rajeev Srivastava — Consultant &amp; Solution Architect · Product · Delivery</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
@@ -66,7 +66,7 @@
   .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:4rem;padding-top:3rem;border-top:1px solid var(--line);}
   .stat-item{padding:.5rem 1.5rem .5rem 0;border-right:1px solid var(--line);}
   .stat-item:last-child{border-right:none;}
-  .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:300;color:var(--accent);line-height:1;margin-bottom:.3rem;}
+  .stat-num{font-family:'DM Sans',sans-serif;font-size:2.4rem;font-weight:300;color:var(--accent);line-height:1;margin-bottom:.3rem;letter-spacing:-.02em;}
   .stat-label{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);}
 
   /* Hero photo */
@@ -95,7 +95,7 @@
   .about-photo{position:relative;flex-shrink:0;}
   .about-photo img{width:100%;height:500px;object-fit:cover;object-position:top center;border:1px solid var(--line2);}
   .about-photo-badge{position:absolute;bottom:-18px;right:-18px;background:var(--bg4);border:1px solid var(--accent);padding:1.1rem 1.5rem;}
-  .about-badge-num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--accent);font-weight:300;line-height:1;}
+  .about-badge-num{font-family:'DM Sans',sans-serif;font-size:2.4rem;color:var(--accent);font-weight:300;line-height:1;letter-spacing:-.02em;}
   .about-badge-text{font-size:11px;color:var(--text2);letter-spacing:.08em;text-transform:uppercase;margin-top:2px;}
   .about-text p{color:var(--text2);font-size:16px;line-height:1.9;margin-bottom:1.6rem;}
 
@@ -129,7 +129,7 @@
   .eco-category{margin-bottom:2.5rem;}
   .eco-cat-label{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:.75rem;}
   .eco-cat-label::before{content:'';display:inline-block;width:16px;height:1px;background:var(--accent);}
-  .eco-apps-grid{display:flex;flex-wrap:wrap;gap:.75rem;}
+  /* eco-apps-grid defined in accordion CSS below */
   .eco-app{display:flex;align-items:center;gap:.6rem;padding:8px 14px;border:1px solid var(--line);background:var(--bg3);transition:border-color .2s,background .2s;cursor:default;}
   .eco-app:hover{border-color:var(--accent);background:var(--bg4);}
   .eco-app-icon{width:22px;height:22px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
@@ -183,7 +183,7 @@
   #impact{background:var(--bg3);transition:background .3s;}
   .impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:3rem;}
   .impact-card{background:var(--bg3);padding:2.5rem 2rem;text-align:center;transition:background .3s;}
-  .impact-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:var(--accent);line-height:1;margin-bottom:.5rem;}
+  .impact-num{font-family:'DM Sans',sans-serif;font-size:3.2rem;font-weight:300;color:var(--accent);line-height:1;margin-bottom:.5rem;letter-spacing:-.02em;}
   .impact-title{font-size:13px;font-weight:500;color:var(--text);letter-spacing:.05em;margin-bottom:.6rem;}
   .impact-desc{font-size:13px;color:var(--text3);line-height:1.65;}
 
@@ -250,23 +250,16 @@
 
   /* Zoho One banner */
   .eco-zohoone {
-    display: grid; grid-template-columns: 160px 1fr; gap: 3rem;
-    align-items: center;
     background: linear-gradient(135deg, #0f0c2e 0%, #1a1560 40%, #2d21a0 100%);
     border: 1px solid rgba(86,70,165,.4);
     padding: 3rem 3.5rem; margin-bottom: 4rem;
   }
   [data-theme="light"] .eco-zohoone { background: linear-gradient(135deg, #2d21a0 0%, #5646A5 100%); }
-  .eco-zohoone-left { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
-  .eco-zoho-logo { height: 36px; width: auto; }
-  .eco-zohoone-badge {
-    background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25);
-    color: #ffd56b; font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem; font-weight: 300; letter-spacing: .08em;
-    padding: 4px 16px;
-  }
-  .eco-zohoone-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: #fff; margin-bottom: .75rem; line-height: 1.2; }
-  .eco-zohoone-desc { font-size: 15px; color: rgba(255,255,255,.75); line-height: 1.8; margin-bottom: 1.5rem; }
+  .eco-zohoone-inner { width: 100%; }
+  .eco-zohoone-top { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+  .eco-zoho-logo { height: 32px; width: auto; flex-shrink: 0; }
+  .eco-zohoone-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: #fff; line-height: 1.2; letter-spacing: .01em; }
+  .eco-zohoone-desc { font-size: 15px; color: rgba(255,255,255,.75); line-height: 1.8; margin-bottom: 1.5rem; max-width: 820px; }
   .eco-zohoone-tags { display: flex; flex-wrap: wrap; gap: .6rem; }
   .eco-tag { font-size: 11.5px; color: rgba(255,255,255,.8); border: 1px solid rgba(255,255,255,.2); padding: 4px 12px; letter-spacing: .04em; background: rgba(255,255,255,.08); }
 
@@ -302,6 +295,60 @@
   .eco-app-name { font-size: 13.5px; font-weight: 500; color: var(--text); margin-bottom: .35rem; letter-spacing: .02em; }
   .eco-app-desc { font-size: 12.5px; color: var(--text2); line-height: 1.6; }
 
+
+  /* ── ACCORDION CATEGORIES ─────────────────────────── */
+  .eco-cat-section { margin-bottom: .5rem; border: 1px solid var(--line); }
+  .eco-cat-trigger {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 1.5rem; cursor: pointer;
+    background: var(--bg3); transition: background .2s;
+    user-select: none; list-style: none;
+  }
+  [data-theme="light"] .eco-cat-trigger { background: var(--bg2); }
+  .eco-cat-trigger:hover { background: var(--bg4); }
+  [data-theme="light"] .eco-cat-trigger:hover { background: var(--bg3); }
+  .eco-cat-trigger-left { display: flex; flex-direction: column; gap: .2rem; }
+  .eco-cat-label { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+  .eco-cat-desc { font-size: 13.5px; color: var(--text2); line-height: 1.5; }
+  .eco-cat-chevron {
+    flex-shrink: 0; width: 28px; height: 28px;
+    border: 1px solid var(--line2); display: flex; align-items: center; justify-content: center;
+    color: var(--text3); font-size: 11px;
+    transition: transform .3s ease, color .2s;
+  }
+  .eco-cat-section.open .eco-cat-chevron { transform: rotate(180deg); color: var(--accent); }
+  .eco-cat-section.open .eco-cat-trigger { background: var(--bg4); }
+  [data-theme="light"] .eco-cat-section.open .eco-cat-trigger { background: var(--bg3); }
+  .eco-cat-body {
+    display: none;
+    padding: 1.5rem;
+    background: var(--bg2);
+    transition: background .3s;
+  }
+  [data-theme="light"] .eco-cat-body { background: var(--bg); }
+  .eco-cat-section.open .eco-cat-body { display: block; }
+
+  /* App cards inside accordion */
+  .eco-apps-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .eco-app-card { background: var(--bg2); padding: 1.25rem; transition: background .2s; }
+  [data-theme="light"] .eco-app-card { background: var(--card-bg, #fff); }
+  .eco-app-card:hover { background: var(--bg3); }
+  [data-theme="light"] .eco-app-card:hover { background: var(--bg2); }
+  .eco-app-name { font-size: 13.5px; font-weight: 500; color: var(--text); margin-bottom: .35rem; letter-spacing: .02em; }
+  .eco-app-desc { font-size: 12.5px; color: var(--text2); line-height: 1.6; }
+
+  /* Mobile fix for eco section */
+  @media(max-width:960px){
+    .eco-apps-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+    .eco-cat-desc { display: none; }
+    .eco-zohoone { padding: 2rem 1.5rem; }
+    .eco-zohoone-top { gap: 1rem; }
+    .eco-zohoone-title { font-size: 1.2rem; }
+  }
+  @media(max-width:580px){
+    .eco-apps-grid { grid-template-columns: 1fr 1fr; }
+  }
+
 </style>
 </head>
 <body>
@@ -331,11 +378,11 @@
   <div class="hero-left">
     <div class="hero-eyebrow">
       <div class="hero-eyebrow-line"></div>
-      <span>Zoho Consulting & Architect &middot; Process Automation &middot; Product &middot; Delivery</span>
+      <span>Consultant &amp; Solution Architect &middot; Product &middot; Delivery</span>
     </div>
     <h1>Rajeev<br><em>Srivastava</em></h1>
     <div class="hero-title-2"><span class="years-exp"></span> Years of Building &amp; Delivering</div>
-    <p class="hero-summary">Expert Zoho Consultant and versatile product professional across B2B SaaS, startup, and enterprise environments, turning complex business challenges into scalable digital solutions with measurable impact.</p>
+    <p class="hero-summary">Expert Zoho Consultant &amp; Solution Architect and versatile product professional across B2B SaaS, startup, and enterprise environments, turning complex business challenges into scalable digital solutions with measurable impact.</p>
     <div class="hero-actions">
       <button class="btn-book" onclick="openBooking()">Book a Session</button>
       <a href="https://linkedin.com/in/rajeevsri" target="_blank" class="btn-ghost">LinkedIn Profile</a>
@@ -353,7 +400,7 @@
       <div class="hero-photo-badge">
         <div>
           <div class="hero-photo-name">Rajeev Srivastava</div>
-          <div class="hero-photo-role">Zoho Consulting &middot; Product &middot; Delivery</div>
+          <div class="hero-photo-role">Consultant &amp; Solution Architect &middot; Product &middot; Delivery</div>
         </div>
       </div>
     </div>
@@ -374,9 +421,8 @@
       <div class="about-text fade-up" style="transition-delay:.15s">
         <div class="section-tag">Who I Am</div>
         <h2 class="section-title" style="margin-bottom:2rem;">A Professional Who<br><em style="font-style:italic;color:var(--accent)">Bridges Gaps</em></h2>
-        <p>I am a Zoho Consultant and versatile product professional with over <span class="years-exp"></span> years of experience spanning Zoho implementation and consulting, Product Management, Project Delivery, and Operations across B2B SaaS, startup, and enterprise environments.</p>
-        <p>What sets me apart is not just deep Zoho expertise, but the ability to see the business process behind every tool. When I audit a Zoho setup, I do not just spot configuration issues — I identify the underlying workflow gaps that are costing you time and money.</p>
-        <p>From reducing shipment creation time by 75% to slashing error rates by 92%, I bring a product analyst mindset to every engagement, defining success metrics, designing for scale, and delivering measurable outcomes.</p>
+        <p>Consultant, Solution Architect, and Product professional with over <span class="years-exp"></span> years of experience across consulting, product management, delivery, and operations — in startups, B2B SaaS, and enterprise environments.</p>
+        <p>I am passionate about understanding how businesses really work — identifying what slows them down and designing solutions that are practical, scalable, and built to last. I bring curiosity, ownership, and a genuine commitment to creating value that outlives the engagement.</p>
         <div style="margin-top:2.5rem;"><button class="btn-book" onclick="openBooking()">Book a Session</button></div>
       </div>
     </div>
@@ -424,12 +470,11 @@
 
     <!-- ZOHO ONE -->
     <div class="eco-zohoone fade-up">
-      <div class="eco-zohoone-left">
-        <img src="https://www.zohowebstatic.com/sites/zweb/images/commonroot/zoho-logo-darkbg.svg" alt="Zoho" class="eco-zoho-logo" onerror="this.style.display='none'">
-        <div class="eco-zohoone-badge">Zoho One</div>
-      </div>
-      <div class="eco-zohoone-right">
-        <div class="eco-zohoone-title">Zoho One — The Operating System for Business</div>
+      <div class="eco-zohoone-inner">
+        <div class="eco-zohoone-top">
+          <img src="https://www.zohowebstatic.com/sites/zweb/images/commonroot/zoho-logo-darkbg.svg" alt="Zoho" class="eco-zoho-logo" onerror="this.style.display='none'">
+          <div class="eco-zohoone-title">Zoho One &mdash; The Operating System for Business</div>
+        </div>
         <p class="eco-zohoone-desc">A single subscription that bundles 45+ integrated Zoho applications into one unified platform. Zoho One eliminates the need for multiple SaaS vendors by giving every department — sales, finance, HR, marketing, support — a connected suite of tools that share data, automate workflows across apps, and provide a single source of truth for the entire organisation.</p>
         <div class="eco-zohoone-tags">
           <span class="eco-tag">45+ Apps</span>
@@ -532,177 +577,243 @@
 
       <!-- SALES -->
       <div class="eco-cat-section">
-        <div class="eco-cat-label">Sales</div>
-        <p class="eco-cat-desc">Tools designed to increase sales team productivity and manage customer relationships.</p>
-        <div class="eco-apps-grid">
-          <div class="eco-app-card"><div class="eco-app-name">CRM</div><div class="eco-app-desc">Comprehensive customer relationship management for customer-facing teams.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Bigin</div><div class="eco-app-desc">Simple pipeline-centric CRM tailored for small businesses moving away from spreadsheets.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Sign</div><div class="eco-app-desc">Secure digital signature application for legally binding business documents.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">SalesIQ</div><div class="eco-app-desc">Digital customer engagement platform with live chat to track and convert website visitors.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Forms</div><div class="eco-app-desc">Online form builder to collect data and responses for various business needs.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">RouteIQ</div><div class="eco-app-desc">Sales map visualisation and optimal route planning for field sales agents.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Bookings</div><div class="eco-app-desc">Appointment scheduling app for managing customer consultations and bookings.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Thrive</div><div class="eco-app-desc">Complete customer loyalty platform built to reward, retain, and grow your consumer base.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">POS</div><div class="eco-app-desc">Modern retail point-of-sale system to manage transactions and streamline store operations.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">DAP</div><div class="eco-app-desc">Digital Adoption Platform providing in-product guidance to simplify software onboarding.</div></div>
-        </div>
-      </div>
+          <div class="eco-cat-trigger" onclick="toggleCat(this)">
+            <div class="eco-cat-trigger-left">
+              <div class="eco-cat-label">Sales</div>
+              <div class="eco-cat-desc">Tools designed to increase sales team productivity and manage customer relationships.</div>
+            </div>
+            <div class="eco-cat-chevron">&#9660;</div>
+          </div>
+          <div class="eco-cat-body">
+            <div class="eco-apps-grid">
+            <div class="eco-app-card"><div class="eco-app-name">CRM</div><div class="eco-app-desc">Comprehensive customer relationship management for customer-facing teams.</div>
+          </div>
+            <div class="eco-app-card"><div class="eco-app-name">Bigin</div><div class="eco-app-desc">Simple pipeline-centric CRM tailored for small businesses moving away from spreadsheets.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Sign</div><div class="eco-app-desc">Secure digital signature application for legally binding business documents.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">SalesIQ</div><div class="eco-app-desc">Digital customer engagement platform with live chat to track and convert website visitors.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Forms</div><div class="eco-app-desc">Online form builder to collect data and responses for various business needs.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">RouteIQ</div><div class="eco-app-desc">Sales map visualisation and optimal route planning for field sales agents.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Bookings</div><div class="eco-app-desc">Appointment scheduling app for managing customer consultations and bookings.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Thrive</div><div class="eco-app-desc">Complete customer loyalty platform built to reward, retain, and grow your consumer base.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">POS</div><div class="eco-app-desc">Modern retail point-of-sale system to manage transactions and streamline store operations.</div></div>
+            </div>
+          </div></div>
 
       <!-- MARKETING -->
       <div class="eco-cat-section">
-        <div class="eco-cat-label">Marketing</div>
-        <p class="eco-cat-desc">Multi-channel marketing tools to engage prospects and personalise experiences at scale.</p>
-        <div class="eco-apps-grid">
-          <div class="eco-app-card"><div class="eco-app-name">Campaigns</div><div class="eco-app-desc">Email marketing software to create, send, and track targeted, conversion-driven campaigns.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Social</div><div class="eco-app-desc">All-in-one platform to schedule, monitor, and manage social media channels.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Backstage</div><div class="eco-app-desc">End-to-end event management software for conferences, meetups, and product launches.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Survey</div><div class="eco-app-desc">Online survey tool to create custom questionnaires and extract audience feedback.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Marketing Automation</div><div class="eco-app-desc">All-in-one software to orchestrate lead generation and multi-channel marketing campaigns.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Sites</div><div class="eco-app-desc">Drag-and-drop website builder with extensive visual customisation options.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Webinar</div><div class="eco-app-desc">Dedicated platform for hosting, webcasting, and managing large-scale online webinars.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">PageSense</div><div class="eco-app-desc">Website conversion optimisation platform with heatmaps, A/B testing, and personalisation.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">LandingPage</div><div class="eco-app-desc">Builder focused on creating optimised, high-converting standalone landing pages.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Domains</div><div class="eco-app-desc">Domain name registration, secured transfers, and secure DNS management.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">CommunitySpaces</div><div class="eco-app-desc">Online community platform for brands to build interactive networks and engage members.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Publish</div><div class="eco-app-desc">Local listing management to control and synchronise business information across directories.</div></div>
-        </div>
-      </div>
+          <div class="eco-cat-trigger" onclick="toggleCat(this)">
+            <div class="eco-cat-trigger-left">
+              <div class="eco-cat-label">Marketing</div>
+              <div class="eco-cat-desc">Multi-channel marketing tools to engage prospects and personalise experiences at scale.</div>
+            </div>
+            <div class="eco-cat-chevron">&#9660;</div>
+          </div>
+          <div class="eco-cat-body">
+            <div class="eco-apps-grid">
+            <div class="eco-app-card"><div class="eco-app-name">Campaigns</div><div class="eco-app-desc">Email marketing software to create, send, and track targeted, conversion-driven campaigns.</div>
+          </div>
+            <div class="eco-app-card"><div class="eco-app-name">Social</div><div class="eco-app-desc">All-in-one platform to schedule, monitor, and manage social media channels.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Backstage</div><div class="eco-app-desc">End-to-end event management software for conferences, meetups, and product launches.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Survey</div><div class="eco-app-desc">Online survey tool to create custom questionnaires and extract audience feedback.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Marketing Automation</div><div class="eco-app-desc">All-in-one software to orchestrate lead generation and multi-channel marketing campaigns.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Sites</div><div class="eco-app-desc">Drag-and-drop website builder with extensive visual customisation options.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Webinar</div><div class="eco-app-desc">Dedicated platform for hosting, webcasting, and managing large-scale online webinars.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">PageSense</div><div class="eco-app-desc">Website conversion optimisation platform with heatmaps, A/B testing, and personalisation.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">LandingPage</div><div class="eco-app-desc">Builder focused on creating optimised, high-converting standalone landing pages.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Domains</div><div class="eco-app-desc">Domain name registration, secured transfers, and secure DNS management.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">CommunitySpaces</div><div class="eco-app-desc">Online community platform for brands to build interactive networks and engage members.</div></div>
+            </div>
+          </div></div>
 
       <!-- SERVICE -->
       <div class="eco-cat-section">
-        <div class="eco-cat-label">Service &amp; Support</div>
-        <p class="eco-cat-desc">Platforms that empower support agents and field workers to deliver great customer service.</p>
-        <div class="eco-apps-grid">
-          <div class="eco-app-card"><div class="eco-app-name">Desk</div><div class="eco-app-desc">Comprehensive context-aware helpdesk and customer support ticketing software.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Assist</div><div class="eco-app-desc">Remote support and unattended remote desktop access software for IT troubleshooting.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">FSM</div><div class="eco-app-desc">End-to-end field service management for scheduling, dispatching, and tracking technicians.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Lens</div><div class="eco-app-desc">Interactive remote assistance app using augmented reality to guide field technicians.</div></div>
-        </div>
-      </div>
+          <div class="eco-cat-trigger" onclick="toggleCat(this)">
+            <div class="eco-cat-trigger-left">
+              <div class="eco-cat-label">Service &amp; Support</div>
+              <div class="eco-cat-desc">Platforms that empower support agents and field workers to deliver great customer service.</div>
+            </div>
+            <div class="eco-cat-chevron">&#9660;</div>
+          </div>
+          <div class="eco-cat-body">
+            <div class="eco-apps-grid">
+            <div class="eco-app-card"><div class="eco-app-name">Desk</div><div class="eco-app-desc">Comprehensive context-aware helpdesk and customer support ticketing software.</div>
+          </div>
+            <div class="eco-app-card"><div class="eco-app-name">Assist</div><div class="eco-app-desc">Remote support and unattended remote desktop access software for IT troubleshooting.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">FSM</div><div class="eco-app-desc">End-to-end field service management for scheduling, dispatching, and tracking technicians.</div></div>
+            </div>
+          </div></div>
 
       <!-- FINANCE -->
       <div class="eco-cat-section">
-        <div class="eco-cat-label">Finance</div>
-        <p class="eco-cat-desc">Back-office operations tools for accounting, expenses, and transaction management.</p>
-        <div class="eco-apps-grid">
-          <div class="eco-app-card"><div class="eco-app-name">Books</div><div class="eco-app-desc">Powerful cloud accounting to track finances, manage invoices, and maintain tax compliance.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Expense</div><div class="eco-app-desc">Corporate travel and automated expense reporting management platform.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Payroll</div><div class="eco-app-desc">Employee payroll processing software configured for automatic tax deductions.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Inventory</div><div class="eco-app-desc">Multi-channel stock management and inventory tracking system.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Billing</div><div class="eco-app-desc">End-to-end subscription lifecycle billing management for businesses.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Invoice</div><div class="eco-app-desc">Free online invoicing platform optimised for freelancers and small businesses.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Practice</div><div class="eco-app-desc">Secure practice management workspace tailored for accounting and auditing firms.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Checkout</div><div class="eco-app-desc">Payment collection portal with custom-branded, secure payment checkout pages.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Payments</div><div class="eco-app-desc">Unified secure payment gateway for collecting business revenue.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Spend</div><div class="eco-app-desc">Centralised platform to track, control, and approve corporate cash outflows.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">ERP</div><div class="eco-app-desc">Cohesive corporate planning software to manage enterprise supply chains and finances.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Procurement</div><div class="eco-app-desc">Source-to-pay vendor portal engineered to track business purchasing workflows.</div></div>
-        </div>
-      </div>
+          <div class="eco-cat-trigger" onclick="toggleCat(this)">
+            <div class="eco-cat-trigger-left">
+              <div class="eco-cat-label">Finance</div>
+              <div class="eco-cat-desc">Back-office operations tools for accounting, expenses, and transaction management.</div>
+            </div>
+            <div class="eco-cat-chevron">&#9660;</div>
+          </div>
+          <div class="eco-cat-body">
+            <div class="eco-apps-grid">
+            <div class="eco-app-card"><div class="eco-app-name">Books</div><div class="eco-app-desc">Powerful cloud accounting to track finances, manage invoices, and maintain tax compliance.</div>
+          </div>
+            <div class="eco-app-card"><div class="eco-app-name">Expense</div><div class="eco-app-desc">Corporate travel and automated expense reporting management platform.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Payroll</div><div class="eco-app-desc">Employee payroll processing software configured for automatic tax deductions.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Inventory</div><div class="eco-app-desc">Multi-channel stock management and inventory tracking system.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Billing</div><div class="eco-app-desc">End-to-end subscription lifecycle billing management for businesses.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Invoice</div><div class="eco-app-desc">Free online invoicing platform optimised for freelancers and small businesses.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Practice</div><div class="eco-app-desc">Secure practice management workspace tailored for accounting and auditing firms.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Checkout</div><div class="eco-app-desc">Payment collection portal with custom-branded, secure payment checkout pages.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Payments</div><div class="eco-app-desc">Unified secure payment gateway for collecting business revenue.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Spend</div><div class="eco-app-desc">Centralised platform to track, control, and approve corporate cash outflows.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">ERP</div><div class="eco-app-desc">Cohesive corporate planning software to manage enterprise supply chains and finances.</div></div>
+            </div>
+          </div></div>
 
       <!-- COLLABORATION -->
       <div class="eco-cat-section">
-        <div class="eco-cat-label">Email, Storage &amp; Collaboration</div>
-        <p class="eco-cat-desc">Core communication suites and productivity systems built for day-to-day operations.</p>
-        <div class="eco-apps-grid">
-          <div class="eco-app-card"><div class="eco-app-name">Mail</div><div class="eco-app-desc">Ad-free, secure email service hosted for businesses of all sizes.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">WorkDrive</div><div class="eco-app-desc">Secure online cloud content storage and team file management platform.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Connect</div><div class="eco-app-desc">Internal corporate social network and employee experience engagement platform.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Cliq</div><div class="eco-app-desc">Team messaging app with real-time chat channels, audio, and video calling.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">ZeptoMail</div><div class="eco-app-desc">Cloud service optimised for high-deliverability transactional email delivery.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Meeting</div><div class="eco-app-desc">Browser-based video conferencing tool built for remote meetings and webinars.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Learn</div><div class="eco-app-desc">Corporate learning management system and internal training manual platform.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">TeamInbox</div><div class="eco-app-desc">Shared email inboxes built for collaborative department sorting (info@, sales@, etc.).</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Writer</div><div class="eco-app-desc">Collaborative word processor for distraction-free content writing and real-time reviews.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Sheet</div><div class="eco-app-desc">Collaborative spreadsheet tool with data validation, pivot functions, and charts.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Show</div><div class="eco-app-desc">Collaborative cloud presentation software with animation tools and pre-made themes.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Tables</div><div class="eco-app-desc">Modern hybrid database-spreadsheet app to structure business data visually.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Notebook</div><div class="eco-app-desc">Visually structured note-taking app spanning voice, text, and checklist files.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Calendar</div><div class="eco-app-desc">Business calendar for managing schedules, recurring events, and appointment availability.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">ToDo</div><div class="eco-app-desc">Task tracker for scheduling personal deadlines or organising team itineraries.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">PDF Editor</div><div class="eco-app-desc">Online utility to split, merge, annotate, sign, and edit text within PDF files.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Office Suite</div><div class="eco-app-desc">Productivity bundle linking Writer, Sheet, and Show into a collaborative interface.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Office Integrator</div><div class="eco-app-desc">Cloud API integrations to embed word, sheet, and presentation editing into web apps.</div></div>
-        </div>
-      </div>
+          <div class="eco-cat-trigger" onclick="toggleCat(this)">
+            <div class="eco-cat-trigger-left">
+              <div class="eco-cat-label">Email, Storage &amp; Collaboration</div>
+              <div class="eco-cat-desc">Core communication suites and productivity systems built for day-to-day operations.</div>
+            </div>
+            <div class="eco-cat-chevron">&#9660;</div>
+          </div>
+          <div class="eco-cat-body">
+            <div class="eco-apps-grid">
+            <div class="eco-app-card"><div class="eco-app-name">Mail</div><div class="eco-app-desc">Ad-free, secure email service hosted for businesses of all sizes.</div>
+          </div>
+            <div class="eco-app-card"><div class="eco-app-name">WorkDrive</div><div class="eco-app-desc">Secure online cloud content storage and team file management platform.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Connect</div><div class="eco-app-desc">Internal corporate social network and employee experience engagement platform.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Cliq</div><div class="eco-app-desc">Team messaging app with real-time chat channels, audio, and video calling.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">ZeptoMail</div><div class="eco-app-desc">Cloud service optimised for high-deliverability transactional email delivery.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Meeting</div><div class="eco-app-desc">Browser-based video conferencing tool built for remote meetings and webinars.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Learn</div><div class="eco-app-desc">Corporate learning management system and internal training manual platform.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">TeamInbox</div><div class="eco-app-desc">Shared email inboxes built for collaborative department sorting (info@, sales@, etc.).</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Writer</div><div class="eco-app-desc">Collaborative word processor for distraction-free content writing and real-time reviews.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Sheet</div><div class="eco-app-desc">Collaborative spreadsheet tool with data validation, pivot functions, and charts.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Show</div><div class="eco-app-desc">Collaborative cloud presentation software with animation tools and pre-made themes.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Tables</div><div class="eco-app-desc">Modern hybrid database-spreadsheet app to structure business data visually.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Notebook</div><div class="eco-app-desc">Visually structured note-taking app spanning voice, text, and checklist files.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Calendar</div><div class="eco-app-desc">Business calendar for managing schedules, recurring events, and appointment availability.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">ToDo</div><div class="eco-app-desc">Task tracker for scheduling personal deadlines or organising team itineraries.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">PDF Editor</div><div class="eco-app-desc">Online utility to split, merge, annotate, sign, and edit text within PDF files.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Office Suite</div><div class="eco-app-desc">Productivity bundle linking Writer, Sheet, and Show into a collaborative interface.</div></div>
+            </div>
+          </div></div>
 
       <!-- HR -->
       <div class="eco-cat-section">
-        <div class="eco-cat-label">Human Resources</div>
-        <p class="eco-cat-desc">Tools built to acquire talent, onboard teams, and manage administrative HR workflows.</p>
-        <div class="eco-apps-grid">
-          <div class="eco-app-card"><div class="eco-app-name">People</div><div class="eco-app-desc">Centralised HR management handling attendance, leaves, and employee self-service records.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Recruit</div><div class="eco-app-desc">Applicant tracking system to source, track, and interview incoming job candidates.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Workerly</div><div class="eco-app-desc">Temporary agency platform to match, schedule, and track hourly or temp shifts.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Shifts</div><div class="eco-app-desc">Employee scheduling app for tracking shift rotations, hours, and time-off requests.</div></div>
-        </div>
-      </div>
+          <div class="eco-cat-trigger" onclick="toggleCat(this)">
+            <div class="eco-cat-trigger-left">
+              <div class="eco-cat-label">Human Resources</div>
+              <div class="eco-cat-desc">Tools built to acquire talent, onboard teams, and manage administrative HR workflows.</div>
+            </div>
+            <div class="eco-cat-chevron">&#9660;</div>
+          </div>
+          <div class="eco-cat-body">
+            <div class="eco-apps-grid">
+            <div class="eco-app-card"><div class="eco-app-name">People</div><div class="eco-app-desc">Centralised HR management handling attendance, leaves, and employee self-service records.</div>
+          </div>
+            <div class="eco-app-card"><div class="eco-app-name">Recruit</div><div class="eco-app-desc">Applicant tracking system to source, track, and interview incoming job candidates.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Workerly</div><div class="eco-app-desc">Temporary agency platform to match, schedule, and track hourly or temp shifts.</div></div>
+            </div>
+          </div></div>
 
       <!-- LEGAL -->
       <div class="eco-cat-section">
-        <div class="eco-cat-label">Legal</div>
-        <p class="eco-cat-desc">Applications structured to manage legally binding operations and contract frameworks.</p>
-        <div class="eco-apps-grid">
-          <div class="eco-app-card"><div class="eco-app-name">Contracts</div><div class="eco-app-desc">Contract lifecycle management software to draft, negotiate, and renew business agreements.</div></div>
-        </div>
-      </div>
+          <div class="eco-cat-trigger" onclick="toggleCat(this)">
+            <div class="eco-cat-trigger-left">
+              <div class="eco-cat-label">Legal</div>
+              <div class="eco-cat-desc">Applications structured to manage legally binding operations and contract frameworks.</div>
+            </div>
+            <div class="eco-cat-chevron">&#9660;</div>
+          </div>
+          <div class="eco-cat-body">
+            <div class="eco-apps-grid">
+            <div class="eco-app-card"><div class="eco-app-name">Contracts</div><div class="eco-app-desc">Contract lifecycle management software to draft, negotiate, and renew business agreements.</div>
+          </div>
+            </div>
+          </div></div>
 
       <!-- SECURITY & IT -->
       <div class="eco-cat-section">
-        <div class="eco-cat-label">Security &amp; IT Management</div>
-        <p class="eco-cat-desc">Tools dedicated to keeping operational data safe while offering IT infrastructure support.</p>
-        <div class="eco-apps-grid">
-          <div class="eco-app-card"><div class="eco-app-name">Vault</div><div class="eco-app-desc">Secure password manager to store, generate, and share enterprise credentials safely.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Directory</div><div class="eco-app-desc">Identity and Access Management service for user provisioning and Single Sign-On.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Creator</div><div class="eco-app-desc">Low-code, AI-powered platform to build custom enterprise cloud applications.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">eProtect</div><div class="eco-app-desc">Advanced email security layer to defend corporate communications against malware and phishing.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Catalyst</div><div class="eco-app-desc">Full-stack serverless platform to build and deploy microservices and APIs.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">RPA</div><div class="eco-app-desc">Robotic Process Automation to automate repetitive manual UI actions via software bots.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">QEngine</div><div class="eco-app-desc">Test automation framework to build, manage, execute, and report code testing scripts.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">OneAuth</div><div class="eco-app-desc">Secure multi-factor authenticator to secure accounts via biometrics or OTPs.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Toolkit</div><div class="eco-app-desc">Diagnostic lookup utilities providing system admins with quick network and IP checks.</div></div>
-        </div>
-      </div>
+          <div class="eco-cat-trigger" onclick="toggleCat(this)">
+            <div class="eco-cat-trigger-left">
+              <div class="eco-cat-label">Security &amp; IT Management</div>
+              <div class="eco-cat-desc">Tools dedicated to keeping operational data safe while offering IT infrastructure support.</div>
+            </div>
+            <div class="eco-cat-chevron">&#9660;</div>
+          </div>
+          <div class="eco-cat-body">
+            <div class="eco-apps-grid">
+            <div class="eco-app-card"><div class="eco-app-name">Vault</div><div class="eco-app-desc">Secure password manager to store, generate, and share enterprise credentials safely.</div>
+          </div>
+            <div class="eco-app-card"><div class="eco-app-name">Directory</div><div class="eco-app-desc">Identity and Access Management service for user provisioning and Single Sign-On.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Creator</div><div class="eco-app-desc">Low-code, AI-powered platform to build custom enterprise cloud applications.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">eProtect</div><div class="eco-app-desc">Advanced email security layer to defend corporate communications against malware and phishing.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Catalyst</div><div class="eco-app-desc">Full-stack serverless platform to build and deploy microservices and APIs.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">RPA</div><div class="eco-app-desc">Robotic Process Automation to automate repetitive manual UI actions via software bots.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">QEngine</div><div class="eco-app-desc">Test automation framework to build, manage, execute, and report code testing scripts.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">OneAuth</div><div class="eco-app-desc">Secure multi-factor authenticator to secure accounts via biometrics or OTPs.</div></div>
+            </div>
+          </div></div>
 
       <!-- BI & ANALYTICS -->
       <div class="eco-cat-section">
-        <div class="eco-cat-label">BI &amp; Analytics</div>
-        <p class="eco-cat-desc">Systems crafted to compile, refine, and present raw business data through visual reporting.</p>
-        <div class="eco-apps-grid">
-          <div class="eco-app-card"><div class="eco-app-name">Analytics</div><div class="eco-app-desc">Self-service business intelligence platform to connect databases and create dashboards.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">DataPrep</div><div class="eco-app-desc">AI-driven ETL tool to cleanse, model, and prepare raw data for analytics.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Embedded BI</div><div class="eco-app-desc">White-labeled analytics tools built to sit directly inside third-party applications.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">AI Dashboard Generator</div><div class="eco-app-desc">Free utility to construct insight visualisation maps on top of raw datasets using AI prompts.</div></div>
-        </div>
-      </div>
+          <div class="eco-cat-trigger" onclick="toggleCat(this)">
+            <div class="eco-cat-trigger-left">
+              <div class="eco-cat-label">BI &amp; Analytics</div>
+              <div class="eco-cat-desc">Systems crafted to compile, refine, and present raw business data through visual reporting.</div>
+            </div>
+            <div class="eco-cat-chevron">&#9660;</div>
+          </div>
+          <div class="eco-cat-body">
+            <div class="eco-apps-grid">
+            <div class="eco-app-card"><div class="eco-app-name">Analytics</div><div class="eco-app-desc">Self-service business intelligence platform to connect databases and create dashboards.</div>
+          </div>
+            <div class="eco-app-card"><div class="eco-app-name">DataPrep</div><div class="eco-app-desc">AI-driven ETL tool to cleanse, model, and prepare raw data for analytics.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Embedded BI</div><div class="eco-app-desc">White-labeled analytics tools built to sit directly inside third-party applications.</div></div>
+            </div>
+          </div></div>
 
       <!-- PROJECT MANAGEMENT -->
       <div class="eco-cat-section">
-        <div class="eco-cat-label">Project Management</div>
-        <p class="eco-cat-desc">Task execution systems to keep projects on track across agile and traditional styles.</p>
-        <div class="eco-apps-grid">
-          <div class="eco-app-card"><div class="eco-app-name">Projects</div><div class="eco-app-desc">Milestone-driven project tracker to organise tasks, log timesheets, and map Gantt charts.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Sprints</div><div class="eco-app-desc">Agile tool for dev teams to map sprint backlogs, task boards, and velocity charts.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">BugTracker</div><div class="eco-app-desc">Issue tracker structured to log, assign, and resolve software bugs.</div></div>
-        </div>
-      </div>
+          <div class="eco-cat-trigger" onclick="toggleCat(this)">
+            <div class="eco-cat-trigger-left">
+              <div class="eco-cat-label">Project Management</div>
+              <div class="eco-cat-desc">Task execution systems to keep projects on track across agile and traditional styles.</div>
+            </div>
+            <div class="eco-cat-chevron">&#9660;</div>
+          </div>
+          <div class="eco-cat-body">
+            <div class="eco-apps-grid">
+            <div class="eco-app-card"><div class="eco-app-name">Projects</div><div class="eco-app-desc">Milestone-driven project tracker to organise tasks, log timesheets, and map Gantt charts.</div>
+          </div>
+            <div class="eco-app-card"><div class="eco-app-name">Sprints</div><div class="eco-app-desc">Agile tool for dev teams to map sprint backlogs, task boards, and velocity charts.</div></div>
+            </div>
+          </div></div>
 
       <!-- DEVELOPER & IoT -->
       <div class="eco-cat-section">
-        <div class="eco-cat-label">Developer Platforms &amp; IoT</div>
-        <p class="eco-cat-desc">Frameworks to assist developers with integrations, automation, and IoT orchestration.</p>
-        <div class="eco-apps-grid">
-          <div class="eco-app-card"><div class="eco-app-name">Flow</div><div class="eco-app-desc">Integration platform to build multi-step workflow automations between web apps.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Creator</div><div class="eco-app-desc">Low-code platform to build custom enterprise cloud applications with AI assistance.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Catalyst</div><div class="eco-app-desc">Full-stack serverless platform to build and deploy microservices or APIs.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">IoT</div><div class="eco-app-desc">Low-code IoT configuration system to integrate and map live machine data streams.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Apptics</div><div class="eco-app-desc">Application analytics suite to monitor mobile app usage, crashes, and performance.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">MCP</div><div class="eco-app-desc">Modern workflow engine to create agentic processes that act on direct text prompts.</div></div>
-          <div class="eco-app-card"><div class="eco-app-name">Vertical Studio</div><div class="eco-app-desc">Infrastructure to build secure, multi-tenant cloud systems for specialised niche industries.</div></div>
-        </div>
-      </div>
-
-    </div><!-- end individual apps -->
+          <div class="eco-cat-trigger" onclick="toggleCat(this)">
+            <div class="eco-cat-trigger-left">
+              <div class="eco-cat-label">Developer Platforms &amp; IoT</div>
+              <div class="eco-cat-desc">Frameworks to assist developers with integrations, automation, and IoT orchestration.</div>
+            </div>
+            <div class="eco-cat-chevron">&#9660;</div>
+          </div>
+          <div class="eco-cat-body">
+            <div class="eco-apps-grid">
+            <div class="eco-app-card"><div class="eco-app-name">Flow</div><div class="eco-app-desc">Integration platform to build multi-step workflow automations between web apps.</div>
+          </div>
+            <div class="eco-app-card"><div class="eco-app-name">Creator</div><div class="eco-app-desc">Low-code platform to build custom enterprise cloud applications with AI assistance.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Catalyst</div><div class="eco-app-desc">Full-stack serverless platform to build and deploy microservices or APIs.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">IoT</div><div class="eco-app-desc">Low-code IoT configuration system to integrate and map live machine data streams.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Apptics</div><div class="eco-app-desc">Application analytics suite to monitor mobile app usage, crashes, and performance.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">MCP</div><div class="eco-app-desc">Modern workflow engine to create agentic processes that act on direct text prompts.</div></div>
+            <div class="eco-app-card"><div class="eco-app-name">Vertical Studio</div><div class="eco-app-desc">Infrastructure to build secure, multi-tenant cloud systems for specialised niche industries.</div></div>
+            </div>
+          </div></div><!-- end individual apps -->
   </div>
 </section>
 
@@ -780,11 +891,11 @@
         <div>
           <div class="exp-role">Product Analyst</div>
           <ul class="exp-desc">
+            <li>Led Zoho One consulting and implementation across CRM, Books, Desk, Sign, Forms, Bookings, Campaigns, Social, Backstage, Surveys, Marketing Automation, Sites, Webinar, Expense, Payroll, Connect, ZeptoMail, Meetings, People, Recruit, Vault, Creator, Deluge Scripting, Projects and more</li>
             <li>Owned end-to-end product lifecycle: discovery, roadmap, delivery, iteration</li>
             <li>Translated business problems into scalable product requirements</li>
             <li>Collaborated across engineering, design and stakeholders for feature delivery</li>
             <li>Defined and tracked success metrics improving performance and adoption</li>
-            <li>Led Zoho One consulting and implementation across CRM, Books, Desk, Sign, Forms, Bookings, Campaigns, Social, Backstage, Surveys, Marketing Automation, Sites, Webinar, Expense, Payroll, Connect, ZeptoMail, Meetings, People, Recruit, Vault, Creator, Projects and more</li>
           </ul>
           <div class="exp-achievements">
             <div class="exp-ach-label">Key Achievements</div>
@@ -1021,12 +1132,14 @@
       <div class="edu-card fade-up" style="transition-delay:.1s">
         <div class="edu-year">2009</div>
         <div class="edu-degree">Intermediate</div>
-        <div class="edu-school">U.P. Board</div>
+        <div class="edu-school">Physics, Chemistry, Math</div>
+        <div class="edu-school" style="margin-top:3px;color:var(--text3);font-size:13px;">U.P. Board, Uttar Pradesh</div>
       </div>
       <div class="edu-card fade-up" style="transition-delay:.2s">
         <div class="edu-year">2007</div>
         <div class="edu-degree">High School</div>
-        <div class="edu-school">U.P. Board</div>
+        <div class="edu-school">Physics, Chemistry, Math</div>
+        <div class="edu-school" style="margin-top:3px;color:var(--text3);font-size:13px;">U.P. Board, Uttar Pradesh</div>
       </div>
     </div>
   </div>
@@ -1055,8 +1168,12 @@
 </section>
 
 <footer>
-  <div class="footer-text">&copy; <span id="footerYear"></span> Rajeev Srivastava &middot; New Delhi, India</div>
-  <div class="footer-text">iam@rajeevsrivastava.com</div>
+  <div class="footer-text">&copy; <span id="footerYear"></span> Rajeev Srivastava</div>
+  <div style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:flex-end;">
+    <a href="mailto:iam@rajeevsrivastava.com" style="font-size:13px;color:var(--text3);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text3)'">iam@rajeevsrivastava.com</a>
+    <a href="terms.html" style="font-size:13px;color:var(--text3);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text3)'">Terms of Service</a>
+    <a href="refund-policy.html" style="font-size:13px;color:var(--text3);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text3)'">Refund &amp; Cancellation Policy</a>
+  </div>
 </footer>
 
 <script src="https://bookings.nimbuspop.com/assets/embed.js"></script>
@@ -1073,15 +1190,34 @@
   var btn=document.getElementById("themeToggle");
   var icon=document.getElementById("toggleIcon");
   var label=document.getElementById("toggleLabel");
-  var theme=localStorage.getItem("rs-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
-  function applyTheme(t){
-    if(t==="light"){root.setAttribute("data-theme","light");icon.textContent="☀";label.textContent="Dark Mode";}
-    else{root.removeAttribute("data-theme");icon.textContent="🌙";label.textContent="Light Mode";}
-    localStorage.setItem("rs-theme",t);theme=t;
+  var theme="dark";
+  var manualOverride=localStorage.getItem("rs-theme-manual");
+
+  function getTimeBasedTheme(){
+    // Use user's local time: 6am-7pm = light, else dark
+    var h=new Date().getHours();
+    return (h>=6 && h<19)?"light":"dark";
   }
-  applyTheme(theme);
-  btn.addEventListener("click",function(){applyTheme(theme==="dark"?"light":"dark");});
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(e){if(!localStorage.getItem("rs-theme"))applyTheme(e.matches?"dark":"light");});
+  function applyTheme(t){
+    if(t==="light"){root.setAttribute("data-theme","light");icon.textContent="🌙";label.textContent="Dark Mode";}
+    else{root.removeAttribute("data-theme");icon.textContent="☀";label.textContent="Light Mode";}
+    theme=t;
+  }
+  // On load: use manual override if set, else auto time-based
+  applyTheme(manualOverride || getTimeBasedTheme());
+
+  btn.addEventListener("click",function(){
+    var next=theme==="dark"?"light":"dark";
+    applyTheme(next);
+    localStorage.setItem("rs-theme-manual",next); // remember manual choice
+  });
+
+  // Re-check every minute in case user leaves page open across sunrise/sunset
+  setInterval(function(){
+    if(!localStorage.getItem("rs-theme-manual")){
+      applyTheme(getTimeBasedTheme());
+    }
+  },60000);
 
   var observer=new IntersectionObserver(function(entries){
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target);}});
@@ -1095,30 +1231,65 @@
     });
   });
 
-  var bookingReady=false,pendingOpen=false;
-  window.addEventListener("load",function(){
-    if(typeof Bookings!=="undefined"){
+  /* ── ZOHO BOOKING MODAL ──
+     Strategy: Let Zoho render its own button (hidden), then proxy our
+     custom buttons to click it. This keeps us inside Zoho's modal flow
+     (no new tab) while using our own styled buttons everywhere.
+  */
+  var _bookingInit = false;
+
+  function _hideZohoNativeBtn() {
+    var sel = '[id^="zb-"],[class*="zb-btn"],[class*="zb-widget"],[data-zb-widget]';
+    document.querySelectorAll(sel).forEach(function(el){ el.style.cssText = "position:fixed!important;opacity:0!important;pointer-events:none!important;width:1px!important;height:1px!important;bottom:0!important;right:0!important;"; });
+  }
+
+  function _findZohoBtn() {
+    var sel = '[id^="zb-"],[class*="zb-btn"],[class*="zb-widget"],[data-zb-widget]';
+    return document.querySelector(sel);
+  }
+
+  window.addEventListener("load", function() {
+    if (typeof Bookings !== "undefined") {
       Bookings.buttonModal({
-        url:"https://iam-rajeevsrivastava.zohobookings.in/portal-embed#/veeraaj",
-        text:"Book now",color:"#5646A5",textColor:"#ffffff",position:"bottom-right"
+        url: "https://iam-rajeevsrivastava.zohobookings.in/portal-embed#/439731000000025006",
+        text: "Book now",
+        color: "#5646A5",
+        textColor: "#ffffff",
+        position: "bottom-right"
       });
-      bookingReady=true;
-      setTimeout(function(){
-        var zbBtn=document.querySelector('[class*="zb-btn"]')||document.querySelector('[id*="zb-widget"]')||document.querySelector('[id*="zb-button"]');
-        if(zbBtn)zbBtn.style.display="none";
-        if(pendingOpen)triggerBookingModal();
-      },600);
+      _bookingInit = true;
+      // Hide native button after it renders
+      setTimeout(_hideZohoNativeBtn, 800);
+      setTimeout(_hideZohoNativeBtn, 1500); // double-check
     }
   });
-  function triggerBookingModal(){
-    var zbBtn=document.querySelector('[class*="zb-btn"]')||document.querySelector('[id*="zb-widget"]')||document.querySelector('[id*="zb-button"]')||document.querySelector('[data-zb]');
-    if(zbBtn){zbBtn.style.display="";zbBtn.click();setTimeout(function(){zbBtn.style.display="none";},100);}
-    else{window.open("https://iam-rajeevsrivastava.zohobookings.in/portal-embed#/veeraaj","_blank");}
+
+  function openBooking() {
+    if (!_bookingInit) {
+      window.open("https://iam-rajeevsrivastava.zohobookings.in/portal-embed#/439731000000025006", "_blank");
+      return;
+    }
+    var zbBtn = _findZohoBtn();
+    if (zbBtn) {
+      // Briefly make it clickable, click it, then hide again
+      zbBtn.style.cssText = "position:fixed!important;bottom:2px!important;right:2px!important;opacity:0!important;width:1px!important;height:1px!important;pointer-events:auto!important;";
+      zbBtn.click();
+      setTimeout(_hideZohoNativeBtn, 300);
+    } else {
+      window.open("https://iam-rajeevsrivastava.zohobookings.in/portal-embed#/439731000000025006", "_blank");
+    }
   }
-  function openBooking(){
-    if(bookingReady){triggerBookingModal();}
-    else{pendingOpen=true;window.open("https://iam-rajeevsrivastava.zohobookings.in/portal-embed#/veeraaj","_blank");}
+
+  /* ── ACCORDION ── */
+  function toggleCat(trigger) {
+    var section = trigger.parentElement;
+    var isOpen  = section.classList.contains("open");
+    // Close all
+    document.querySelectorAll(".eco-cat-section.open").forEach(function(s){ s.classList.remove("open"); });
+    // Open clicked one if it was closed
+    if (!isOpen) section.classList.add("open");
   }
+
 </script>
 </body>
 </html>
